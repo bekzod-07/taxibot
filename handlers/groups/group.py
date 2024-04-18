@@ -26,7 +26,7 @@ async def echo_message(msg: types.Message):
                     user_first_name = msg.from_user.first_name
                     user_last_name = msg.from_user.last_name
 
-                    forward_text = f"[{user_first_name} {user_last_name}](tg://user?id={user_id}))"
+                    forward_text = f"ASSALOMU ALEYKUM\n\nSIZNING ZAKAZINGIZ LIDER\n\nSHAFYORLAR GURUHIGA TUSHDI✅\n\nLICHKADA ISHONCHLI SHAFYORLARIMIZ KUTMOQDA❗️"
                     await bot.send_message(chat_id, forward_text, parse_mode="markdown")
                 except Exception as e:
                     logging.error(f"Error occurred: {e}")
