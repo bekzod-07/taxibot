@@ -4,8 +4,8 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
-allowed_group_chat_ids = [-1002143697662]  # List of allowed group chat IDs
-forward_chat_id = -1002101003332  # Destination chat ID for forwarding messages
+allowed_group_chat_ids = [-1001170798978, -1001797195073, -1001799096541]  # List of allowed group chat IDs
+forward_chat_id = 1002009198668  # Destination chat ID for forwarding messages
 disallowed_user_ids = [5816736795, 862452906, 1349806769, 35080150, 1753033938, 406795002]  # List of disallowed user IDs for forwarding messages
 
 @dp.message_handler(content_types=types.ContentTypes.TEXT)
