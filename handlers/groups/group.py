@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.INFO)
 
 allowed_group_chat_ids = [-1001170798978, -1001797195073, -1001799096541]  # List of allowed group chat IDs
 forward_chat_id = -1002009198668  # Destination chat ID for forwarding messages
-disallowed_user_ids = [406795002, 6366509243, 5284392977, 6653637615, 1538317970, 2053644093, 1538317970, 406795002, 321309026, 6653637615, 5284392977, 6660029795, 1753033938, 6366509243]  # List of disallowed user IDs for forwarding messages
+disallowed_user_ids = [406795002, 6366509243, 5284392977, 6653637615, 1538317970, 2053644093, 1538317970, 406795002, 321309026, 6653637615, 5284392977, 6660029795, 1753033938, 6366509243, 862452906]  # List of disallowed user IDs for forwarding messages
 
 @dp.message_handler(content_types=types.ContentTypes.TEXT)
 async def echo_message(msg: types.Message):
