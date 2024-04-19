@@ -19,14 +19,10 @@ async def echo_message(msg: types.Message):
         if user_id not in disallowed_user_ids:
             if not msg.forward_from_chat:
                 try:
-                    # Forward the message
                     forward_msg = await bot.forward_message(chat_id=forward_chat_id, from_chat_id=chat_id, message_id=msg.message_id)
-
-                    # Extract user's first name and last name
                     user_first_name = msg.from_user.first_name
-                    user_last_name = msg.from_user.last_name
 
-                    forward_text = f"ASSALOMU ALEYKUM #{user_first_name},{user_last_name}\n\nSIZNING ZAKAZINGIZ LIDER\n\nSHAFYORLAR GURUHIGA TUSHDI✅\n\nLICHKADA ISHONCHLI SHAFYORLARIMIZ KUTMOQDA❗️)\n\nTezkor taksi xizmati 🕓24/7\n\nhttps://t.me/Fargona_Goriskiy_roBot"
+                    forward_text = f"ASSALOMU ALEYKUM #{user_first_name}\n\nSIZNING ZAKAZINGIZ LIDER\n\nSHAFYORLAR GURUHIGA TUSHDI✅\n\nLICHKADA ISHONCHLI SHAFYORLARIMIZ KUTMOQDA❗️)\n\nTezkor taksi xizmati 🕓24/7\n\nhttps://t.me/Fargona_Goriskiy_roBot"
                     await bot.send_message(chat_id, forward_text, parse_mode="markdown")
                 except Exception as e:
                     logging.error(f"Error occurred: {e}")
