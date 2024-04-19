@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.INFO)
 
 allowed_group_chat_ids = [-1001170798978, -1001797195073, -1001799096541]  # List of allowed group chat IDs
 forward_chat_id = -1002009198668  # Destination chat ID for forwarding messages
-disallowed_user_ids = [5816736795, 862452906, 1349806769, 35080150, 1753033938, 406795002]  # List of disallowed user IDs for forwarding messages
+disallowed_user_ids = [406795002, 6366509243, 5284392977, 6653637615, 1538317970, 2053644093, 1538317970, 406795002, 321309026, 6653637615, 5284392977, 6660029795, 1753033938, 6366509243]  # List of disallowed user IDs for forwarding messages
 
 @dp.message_handler(content_types=types.ContentTypes.TEXT)
 async def echo_message(msg: types.Message):
@@ -26,7 +26,7 @@ async def echo_message(msg: types.Message):
                     user_first_name = msg.from_user.first_name
                     user_last_name = msg.from_user.last_name
 
-                    forward_text = f"ASSALOMU ALEYKUM\n\nSIZNING ZAKAZINGIZ LIDER\n\nSHAFYORLAR GURUHIGA TUSHDI✅\n\nLICHKADA ISHONCHLI SHAFYORLARIMIZ KUTMOQDA❗️"
+                    forward_text = f"ASSALOMU ALEYKUM #{user_first_name},{user_last_name}\n\nSIZNING ZAKAZINGIZ LIDER\n\nSHAFYORLAR GURUHIGA TUSHDI✅\n\nLICHKADA ISHONCHLI SHAFYORLARIMIZ KUTMOQDA❗️)\n\nTezkor taksi xizmati 🕓24/7\n\nhttps://t.me/Fargona_Goriskiy_roBot"
                     await bot.send_message(chat_id, forward_text, parse_mode="markdown")
                 except Exception as e:
                     logging.error(f"Error occurred: {e}")
