@@ -14,7 +14,7 @@ async def echo_message(msg: types.Message):
     chat_id = msg.chat.id
     user = await bot.get_chat_member(chat_id, user_id)
     message_text = msg.text
-    
+
 
     if chat_id in allowed_group_chat_ids:
         if user_id not in disallowed_user_ids:
@@ -24,7 +24,7 @@ async def echo_message(msg: types.Message):
                     user_first_name = msg.from_user.first_name
 
                     forward_text = f"ASSALOMU ALEYKUM #{user_first_name}\n\nSIZNING ZAKAZINGIZ LIDER\n\nSHAFYORLAR GURUHIGA TUSHDI✅\n\nLICHKADA ISHONCHLI SHAFYORLARIMIZ KUTMOQDA❗️)\n\nTezkor taksi xizmati 🕓24/7\n\nhttps://t.me/Fargona_Goriskiy_roBot"
-                    await bot.send_message(chat_id, forward_text, parse_mode="markdown")
+                    await bot.send_message(chat_id, forward_text)
                 except Exception as e:
                     logging.error(f"Error occurred: {e}")
                 finally:
