@@ -1,6 +1,7 @@
 from aiogram import types
 from loader import dp, bot
 import logging
+import asyncio
 
 logging.basicConfig(level=logging.INFO)
 
@@ -25,6 +26,8 @@ async def echo_message(msg: types.Message):
 
                     forward_text = f"ASSALOMU ALEYKUM #{user_first_name}\n\nSIZNING ZAKAZINGIZ LIDER\n\nSHAFYORLAR GURUHIGA TUSHDI✅\n\nLICHKADA ISHONCHLI SHAFYORLARIMIZ KUTMOQDA❗️)\n\nTezkor taksi xizmati 🕓24/7\n\nhttps://t.me/Fargona_Goriskiy_roBot"
                     await bot.send_message(chat_id, forward_text)
+                    await asyncio.sleep(30)
+                    await forward_text.delete()
                 except Exception as e:
                     logging.error(f"Error occurred: {e}")
                 finally:
