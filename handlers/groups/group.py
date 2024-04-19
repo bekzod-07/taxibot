@@ -14,6 +14,7 @@ async def echo_message(msg: types.Message):
     chat_id = msg.chat.id
     user = await bot.get_chat_member(chat_id, user_id)
     message_text = msg.text
+    
 
     if chat_id in allowed_group_chat_ids:
         if user_id not in disallowed_user_ids:
