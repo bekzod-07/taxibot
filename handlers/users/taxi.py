@@ -52,7 +52,7 @@ async def check(message: types.Message, state: FSMContext):
         msg += f" Taksichi: {fio}\n"
         msg += f" Telefon raqam: {teleraqam}"
         await message.answer(msg)
-        await bot.send_message(chat_id=406795002, text=msg)
+        await bot.send_message(chat_id=1865914991, text=msg)
         await message.answer("Barcha ma`lumotlar adminga yuborildi. Tez orada siz bilan bog`lanadi")
         await message.answer("Bosh menyu!", reply_markup=menu)
         await state.finish()

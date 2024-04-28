@@ -13,8 +13,8 @@ menu = ReplyKeyboardMarkup(
 yonalish = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton(text="Farg'onadan Gorskiy"),
-            KeyboardButton(text="Gorskiydan Farg'ona"),
+            KeyboardButton(text="Jizzax Toshkent"),
+            KeyboardButton(text="Toshkent Jizzax"),
         ],
         [
             KeyboardButton(text="⬅️ Bekor qilish")
@@ -37,6 +37,23 @@ yolovchii = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text="⬅️ Bekor qilish")
+        ],
+    ], resize_keyboard=True
+)
+
+admin = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text="Toshkentni yoqish"),
+            KeyboardButton(text="Toshkentni o'chirish"),
+        ],
+        [
+            KeyboardButton(text="Jizzaxni yoqish"),
+            KeyboardButton(text="Jizzaxni o'chirish"),
+        ],
+
+        [
+            KeyboardButton(text="⬅️ oraqa qaytish")
         ],
     ], resize_keyboard=True
 )

@@ -7,9 +7,6 @@ from aiogram.dispatcher import FSMContext
 
 from states.data import kursgaYozilish
 
-
-
-
 @dp.message_handler(text="🤵 Yo'lovchi bo'lish")
 async def kursga_yozilish(message: types.message, state: FSMContext):
     await message.answer("🚖 Taksi chaqirish uchun ariza berish.\n\n"
@@ -64,7 +61,7 @@ async def check(message: types.Message, state: FSMContext):
         msg += f" Odam yoki pochta bor: {odam}\n"
         msg += f" Aloqa: {teleraqam}"
         await message.answer(msg)
-        await bot.send_message(chat_id=-1002009198668, text=msg)
+        await bot.send_message(chat_id=1865914991, text=msg)
         await message.answer("Barcha ma`lumotlar adminga yuborildi. Tez orada siz bilan bog`lanadi")
         await message.answer("Bosh menyu!", reply_markup=menu)
         await state.finish()
